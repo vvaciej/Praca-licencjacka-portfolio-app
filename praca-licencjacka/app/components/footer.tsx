@@ -1,0 +1,31 @@
+import { Mail } from 'lucide-react';
+import { FaInstagram, FaGithub } from 'react-icons/fa';
+
+export default function Footer() {
+	return (
+		<footer className='flex h-90 w-full items-center justify-center bg-[#191919]'>
+			<div className='flex h-4/9 w-170 flex-col justify-between text-white'>
+				<section>
+					<h3 className='text-xl font-semibold'>Kontakt</h3>
+				</section>
+				<section className='flex flex-col gap-y-3 text-[13px]'>
+					<p className='font-light text-[#C5C5C5]'>rewfwffw efw fewfwffe</p>
+					<div className='flex items-center'>
+						<Mail className='h-4 pr-2' />
+						<a className='font-semibold text-[#e0e0e0]' href='mailto:maciejskok2004@gmail.com'>
+							maciejskok2004@gmail.com
+						</a>
+					</div>
+				</section>
+				<section className='flex gap-x-5'>
+					<a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+						<FaInstagram className='h-5 w-5 cursor-pointer hover:text-green-200 transition-colors' />
+					</a>
+					<a href='https://github.com' target='_blank' rel='noopener noreferrer'>
+						<FaGithub className='h-5 w-5 cursor-pointer hover:text-green-200 transition-colors' />
+					</a>
+				</section>
+			</div>
+		</footer>
+	);
+}
