@@ -53,21 +53,23 @@ export default function Home() {
 						<section className='flex flex-col items-center gap-y-3 w-full'>
 							<h2 className='uppercase text-2xl font-black text-orange-300'>Projekty</h2>
 							<section className='flex gap-x-6 w-full h-50'>
-								<div className='rounded-2xl w-full'>
-									<section className='bg-white w-full h-3/4'></section>
-									<section className='px-4 pt-0.5 bg-[#252525] h-1/4 rounded-b-2xl'>
+								<a href="https://martamoszko.pl" target='_blank' className='relative rounded-2xl w-full inline-block transition-transform duration-300 ease-in-out hover:scale-105'>
+									<section className='bg-white w-full h-3/4 z-10 relative overflow-hidden rounded-t-2xl'>
+										<Image src={'/martamoszkostrona.png'} alt='strona-psycholożki-podgląd' width={'500'} height={'500'} />
+									</section>
+									<section className='relative px-4 pt-0.5 bg-[#252525] h-1/4 rounded-b-2xl z-20'>
 										<span className='text-[9px] uppercase font-semibold text-[#8491A0]'>Kliknij żeby zobaczyć</span>
 										<h3 className='uppercase text-sm font-bold leading-2.5'>Strona psycholożki</h3>
 									</section>
-								</div>
+								</a>
 
-								<div className='rounded-2xl w-full'>
+								<a href="https://martamoszko.pl" className='rounded-2xl w-full inline-block transition-transform duration-300 ease-in-out hover:scale-105'>
 									<section className='bg-white w-full h-3/4'></section>
 									<section className='px-4 pt-0.5 bg-[#252525] h-1/4 rounded-b-2xl'>
 										<span className='text-[9px] uppercase font-semibold text-[#8491A0]'>Kliknij żeby zobaczyć</span>
 										<h3 className='uppercase text-sm font-bold leading-2.5'>Javascript quiz</h3>
 									</section>
-								</div>
+								</a>
 							</section>
 						</section>
 						<section className='flex flex-col gap-y-3 w-full'>
@@ -109,7 +111,7 @@ export default function Home() {
 				</main>
 			</div>
 			<footer className='w-full h-90 bg-[#191919] flex items-center justify-center'>
-				<div className='h-4/9 text-white flex flex-col justify-between w-170'>
+				<div className='h-4/9 text-white flex flex-col justify-between w-170 cursor-pointer'>
 					<section>
 						<h3 className='text-xl font-semibold'>Kontakt</h3>
 					</section>
