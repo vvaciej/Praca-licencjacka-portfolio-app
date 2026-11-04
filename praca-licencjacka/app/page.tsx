@@ -100,10 +100,17 @@ export default function Home() {
 										</section>
 										<span className='text-xs text-[#8491A0]'>Paźdz. 2026 - Obecnie</span>
 									</section>
-									<p className='text-xs text-[#8491A0]'>
-										Jako stażysta brałem udział w realnych projektach jdjjdjdjdjdjdjdj jdj djd jddjdjd jdjdj djdjdjddj
-										djd jdjdjdjddj djdjdj wef w f ef w f f wew we fwf ewew fwe we fwe fwef few we we wfe fwe fwe fwe fwe
-										we we fwe we fwe fwe fwewfe e fwefw e fwe wef efe ef wef f ew efwf ew efw efwf ew fwe few few w fwe
+									<p className='text-xs text-[#8491A0] leading-6'>
+										<li>
+											Obsługa i praca z system CMS, w tym edycja oraz aktualizacja treść na stronach intenetowych według odgórnych zgłoszeń
+										</li>
+										<li>Udział w przygotwywaniu nowego systemu CMS do wdrożenia</li>
+										<li>Tworzenie i dokumentowanie scenariuszy oraz przypadków testowych (Test Cases)</li>
+										<li>Praca z narzędziem TestLink w zakresie zarządzania przypadkami testowymi</li>
+										<li>Przygotowywanie scenariuszy testowych weryfikujących funkcjonalności nowego systemu CMS</li>
+										<li>Poznawanie funkcjonalności systemu oraz wspieranie procesu jego testowania przed wdrożeniem</li>
+										<li>Współpraca z zespołem marketingowym przy realizacji bieżących zadań i projektów</li>
+										<li>Udział w cotygowniowym spotkaniach zespołu dotyczących postępów prac, planowania i omawiania bieżących zadań i projektów</li>
 									</p>
 								</div>
 							</section>
@@ -117,10 +124,15 @@ export default function Home() {
 										</section>
 										<span className='text-xs text-[#8491A0]'>Sierp. 2026 - Wrzes. 2026</span>
 									</section>
-									<p className='text-xs text-[#8491A0]'>
-										Jako stażysta brałem udział w realnych projektach jdjjdjdjdjdjdjdj jdj djd jddjdjd jdjdj djdjdjddj
-										djd jdjdjdjddj djdjdj wef w f ef w f f wew we fwf ewew fwe we fwe fwef few we we wfe fwe fwe fwe fwe
-										we we fwe we fwe fwe fwewfe e fwefw e fwe wef efe ef wef f ew efwf ew efw efwf ew fwe few few w fwe
+									<p className='text-xs text-[#8491A0] leading-6'>
+										<li>
+											Tworzenie i rozwijanie funkcjonalnej strony internetowej z wykorzystaniem systemu CMS Drupal
+										</li>
+										<li>Praca z system CRM oraz poznawanie jego funkcjonalności</li>
+										<li>Integracja warstwy frontendowej strony internetowej z system CRM</li>
+										<li>Konfiguracja i praca ze środowiskiem hostingowym Pantheon</li>
+										<li>Testowanie funkcjonalności strony internetowej oraz sprawdzanie poprawności działania połączenia z CRM</li>
+										<li>Praktyczne wykorzystanie technologii webowych w procesie tworzenia i wdrażania strony internetowej</li>
 									</p>
 								</div>
 							</section>
