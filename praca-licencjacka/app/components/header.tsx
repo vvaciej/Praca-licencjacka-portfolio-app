@@ -1,16 +1,38 @@
+'use client'
+
 export default function Header() {
+	const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 	return (
 		<header className='flex fixed top-0 z-30 h-17 w-full justify-center border-b border-[#252525] bg-[#1c1c1c]'>
 			<div className='w-180'>
 				<nav className='flex h-full w-full items-center justify-between text-xs'>
-					<a href='./' className='cursor-pointer text-[0.95rem] font-semibold text-white'>
-						logo
+					<a
+						href='./'
+						className='cursor-pointer font-[family-name:var(--font-mr-dafoe)] text-xl text-white text-center leading-[18px]'>
+						Skokowski
 					</a>
 					<ul className='flex gap-16 uppercase tracking-wider text-white'>
-						<button className='cursor-pointer'>O mnie</button>
-						<button className='cursor-pointer'>Projekty</button>
-						<button className='cursor-pointer'>Doświadczenie</button>
-						<button className='cursor-pointer'>Kontakt</button>
+						<button
+							onClick={() => scrollToSection('projekty')}
+							className='cursor-pointer hover:text-sky-300 transition-colors'>
+							Projekty
+						</button>
+						<button
+							onClick={() => scrollToSection('doswiadczenie')}
+							className='cursor-pointer hover:text-sky-300 transition-colors'>
+							Doświadczenie
+						</button>
+						<button
+							onClick={() => scrollToSection('kontakt')}
+							className='cursor-pointer hover:text-sky-300 transition-colors'>
+							Kontakt
+						</button>
 					</ul>
 				</nav>
 			</div>
