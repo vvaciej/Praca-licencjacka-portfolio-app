@@ -4,12 +4,12 @@ import { FaInstagram, FaGithub } from 'react-icons/fa';
 export default function Footer() {
 	return (
 		<footer className='flex h-90 w-full items-center justify-center bg-[#191919]'>
-			<section className='flex min-w-[800px]:h-2/3 h-full min-w-[800px]:w-170 flex-col px-7 py-14 justify-between text-white' id='kontakt'>
+			<section className='flex min-[800px]:h-2/3 h-full min-[800px]:w-170 flex-col min-[800px]:px-0 min-[800px]:py-0 min-[400px]:px-7 px-5 min-[500px]:py-12 py-10 min-[350px]:py-8 justify-between text-white' id='kontakt'>
 				<section>
 					<h3 className='text-xl font-semibold'>Kontakt</h3>
 				</section>
 				<section className='flex flex-col gap-y-4 text-[13px]'>
-					<p className='font-light text-[#C5C5C5]'>
+					<p className='font-light text-[#C5C5C5] min-[500px]:text-[13px] text-[12px]'>
 						Początkujący Full Stack Developerem, a świat IT i nowych technologii to moja pasja i hobby. Interesuję się
 						zarówno programowaniem, tworzeniem aplikacji internetowych, jak i testowaniem oraz rozwojem systemów
 						informatycznych. Stale poszerzam swoją wiedzę, chętnie poznając nowe technologię i rozwiązania.

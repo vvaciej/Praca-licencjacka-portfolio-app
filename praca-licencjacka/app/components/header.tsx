@@ -17,7 +17,7 @@ export default function Header() {
 						className='cursor-pointer font-[family-name:var(--font-mr-dafoe)] text-xl text-white text-center leading-[18px]'>
 						Skokowski
 					</a>
-					<ul className='gap-16 uppercase tracking-wider text-white min-w-[800px]:flex hidden'>
+					<ul className='gap-16 uppercase tracking-wider text-white min-[800px]:flex hidden'>
 						<button
 							onClick={() => scrollToSection('projekty')}
 							className='cursor-pointer hover:text-sky-300 transition-colors'>
