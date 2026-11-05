@@ -10,14 +10,14 @@ export default function Header() {
 
 	return (
 		<header className='flex fixed top-0 z-30 h-17 w-full justify-center border-b border-[#252525] bg-[#1c1c1c]'>
-			<div className='w-180'>
+			<div className='min-[800px]:w-180 w-max'>
 				<nav className='flex h-full w-full items-center justify-between text-xs'>
 					<a
 						href='./'
 						className='cursor-pointer font-[family-name:var(--font-mr-dafoe)] text-xl text-white text-center leading-[18px]'>
 						Skokowski
 					</a>
-					<ul className='flex gap-16 uppercase tracking-wider text-white'>
+					<ul className='gap-16 uppercase tracking-wider text-white min-w-[800px]:flex hidden'>
 						<button
 							onClick={() => scrollToSection('projekty')}
 							className='cursor-pointer hover:text-sky-300 transition-colors'>

@@ -1,0 +1,1 @@
+Apka w połączeniu Frontend Next.js & React z CMS Sanity.io na deployu Vercela

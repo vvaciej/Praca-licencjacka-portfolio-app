@@ -4,7 +4,7 @@ import { FaInstagram, FaGithub } from 'react-icons/fa';
 export default function Footer() {
 	return (
 		<footer className='flex h-90 w-full items-center justify-center bg-[#191919]'>
-			<section className='flex h-2/3 w-170 flex-col justify-between text-white' id='kontakt'>
+			<section className='flex min-w-[800px]:h-2/3 h-full min-w-[800px]:w-170 flex-col px-7 py-14 justify-between text-white' id='kontakt'>
 				<section>
 					<h3 className='text-xl font-semibold'>Kontakt</h3>
 				</section>

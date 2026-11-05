@@ -35,10 +35,10 @@ export default function Home() {
 							</p>
 							<section className='flex gap-x-4'>
 								<a
-									href='mailto:maciejskok2004@gmail.com'
+									href='tel:795369308'
 									className='group relative isolate inline-block overflow-hidden rounded-3xl border-2 border-white px-5 py-3 font-semibold text-black bg-white transition-all duration-300 hover:scale-105'>
 									<span className='absolute inset-0 -z-10 ' />
-									Skontaktuj się
+									+48 795369308
 								</a>
 								<a
 									href=''
