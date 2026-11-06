@@ -39,14 +39,14 @@ const EXPERIENCES = [
 
 export default function Experience() {
 	return (
-		<section className='flex flex-col min-[500px]:gap-y-3 w-full' id='experience_section'>
+		<section className='flex flex-col gap-y-8 min-[800px]:gap-y-10 w-full' id='experience_section'>
 			<h2 className='uppercase min-[800px]:text-2xl text-xl text-center font-black text-blue-300 tracking-wide'>
 				Doświadczenie
 			</h2>
 
 			{EXPERIENCES.map((exp, index) => (
-				<section key={index} className='flex w-full flex-col gap-y-6' id={exp.id}>
-					<div className='flex flex-col gap-y-5 min-[500px]:mt-10 mt-7'>
+				<section key={index} className='flex w-full flex-col mb-7' id={exp.id}>
+					<div className='flex flex-col gap-y-5'>
 						<div className='flex min-[800px]:justify-between min-[800px]:flex-row flex-col items-center w-full'>
 							<div className='flex min-[800px]:gap-x-4 gap-x-2 min-[800px]:mb-0 mb-2 items-center'>
 								<Image src={exp.logo} title={exp.alt} alt={exp.alt} width={30} height={30} />
