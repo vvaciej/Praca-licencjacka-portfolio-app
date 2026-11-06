@@ -39,14 +39,14 @@ const EXPERIENCES = [
 
 export default function Experience() {
 	return (
-		<section className='flex flex-col min-[500px]:gap-y-3 gap-y-0 w-full' id='experience_section'>
+		<section className='flex flex-col min-[500px]:gap-y-3 w-full' id='experience_section'>
 			<h2 className='uppercase min-[800px]:text-2xl text-xl text-center font-black text-blue-300 tracking-wide'>
 				Doświadczenie
 			</h2>
 
 			{EXPERIENCES.map((exp, index) => (
 				<section key={index} className='flex w-full flex-col gap-y-6' id={exp.id}>
-					<div className='flex flex-col gap-y-5 mt-10'>
+					<div className='flex flex-col gap-y-5 min-[500px]:mt-10 mt-7'>
 						<div className='flex min-[800px]:justify-between min-[800px]:flex-row flex-col items-center w-full'>
 							<div className='flex min-[800px]:gap-x-4 gap-x-2 min-[800px]:mb-0 mb-2 items-center'>
 								<Image src={exp.logo} title={exp.alt} alt={exp.alt} width={30} height={30} />
@@ -56,7 +56,7 @@ export default function Experience() {
 							<span className='text-xs text-(--second-text)'>{exp.period}</span>
 						</div>
 
-						<ul className='list-disc list-inside text-[12.5px] text-(--second-text-lighter) min-[800px]:leading-6 flex flex-col gap-y-2'>
+						<ul className='list-disc list-inside text-[12.5px] text-(--second-text-lighter) min-[800px]:leading-6 flex flex-col min-[800px]:gap-y-2 gap-y-3'>
 							{exp.duties.map((duty, dutyIdx) => (
 								<li key={dutyIdx}>{duty}</li>
 							))}

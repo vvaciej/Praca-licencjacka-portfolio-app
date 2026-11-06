@@ -28,7 +28,7 @@ export default function Hero() {
 				<a
 					href='tel:795369308'
 					id='hero_section__calling__button'
-					className='group relative isolate inline-block overflow-hidden rounded-3xl border-2 border-white min-[500px]:px-4 min-[500px]:py-3 px-2 font-semibold text-black bg-white transition-all duration-300 min-[800px]:hover:scale-105 min-[500px]:text-md text-sm py-3.5'>
+					className='group relative isolate inline-block overflow-hidden rounded-3xl border-2 border-white min-[500px]:px-4 min-[500px]:py-3 px-3 font-semibold text-black bg-white transition-all duration-300 min-[800px]:hover:scale-105 min-[500px]:text-md text-sm py-3.5'>
 					<span className='absolute inset-0 -z-10 ' />
 					+48 795369308
 				</a>
