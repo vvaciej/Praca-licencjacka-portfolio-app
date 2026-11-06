@@ -11,12 +11,12 @@ export default function Header() {
 	return (
 		<header
 			id='header_section'
-			className='flex fixed top-0 z-30 h-17 w-full justify-center border-b border-[#252525] bg-(--header-bg-color)'>
+			className='flex fixed top-0 z-30 h-17 w-full justify-center border-b border-[#252525] bg-(--second-section-bg-color)'>
 			<div className='min-[800px]:w-180 w-max'>
 				<nav className='flex h-full w-full items-center justify-between text-xs'>
 					<a
 						href='./'
-						id="header_section__home__button"
+						id='header_section__home__button'
 						className='cursor-pointer font-[family-name:var(--font-mr-dafoe)] text-xl text-white text-center leading-[18px]'>
 						Skokowski
 					</a>
