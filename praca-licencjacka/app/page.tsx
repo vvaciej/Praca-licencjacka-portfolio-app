@@ -1,9 +1,10 @@
-import Header from '@/app/components/header';
+import Header from '@/app/layouts/header';
+import Footer from '@/app/layouts/footer';
+
 import Hero from './components/hero';
 import Projects from './components/projects';
 import Skills from './components/skills';
 import Experience from './components/expierence';
-import Footer from '@/app/components/footer';
 
 import ClientLayout from './client-layout';
 
