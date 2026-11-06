@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+:root {
+  --background: var(--header-bg-color);
+  --foreground: var(--header-bg-color);
+}
+
 @theme inline {
   --font-sans: var(--font-poppins);
   --font-mono: var(--font-geist-mono);
@@ -14,9 +19,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--header-bg-color);
+    --foreground: var(--header-bg-color);
   }
 }
 
 body {
+  background: var(--header-bg-color);
+  color: var(--header-bg-color);
   font-family: var(--font-sans);
 }
