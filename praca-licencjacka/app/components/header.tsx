@@ -17,7 +17,7 @@ export default function Header() {
 					<a
 						href='./'
 						id="header_section__home__button"
-						className='cursor-pointer font-[family-name:var(--font-mr-dafoe)] text-xl text-white text-center leading-[18px]'>
+						className='cursor-pointer font-(family-name:--font-mr-dafoe) text-xl text-white text-center leading-4.5'>
 						Skokowski
 					</a>
 					<ul className='gap-16 uppercase tracking-wider text-white min-[800px]:flex hidden'>

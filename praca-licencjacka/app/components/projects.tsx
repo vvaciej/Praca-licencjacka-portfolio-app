@@ -1,69 +1,99 @@
-'use client';
 
-import Image from 'next/image';
-import { SiGithub } from 'react-icons/si';
+import {Suspense} from 'react'
+import Image from 'next/image'
+import {SiGithub} from 'react-icons/si'
+import {getProjects} from '../lib/queries'
+import {urlFor} from '../lib/image'
 
-const PROJECTS = [
-	{
-		title: 'Strona psycholożki',
-		liveUrl: 'https://martamoszko.pl',
-		githubUrl: 'https://github.com/vvaciej/Marta-Psycholog',
-		imageSrc: '/martamoszkostrona.png',
-		imageAlt: 'strona-psycholożki-podgląd',
-		projectId: 'project_section__marta__moszko__id' 
-	},
-];
+async function ProjectsContent() {
+  const projects = await getProjects()
+
+  return (
+    <section
+      className='flex flex-col items-center min-[500px]:gap-y-7 gap-y-5 w-full'
+      id='projects_section'
+    >
+      <h2
+        className='uppercase min-[800px]:text-2xl text-xl font-black text-orange-300'
+        id='projects_section__main__section__text'
+      >
+        Projekty
+      </h2>
+
+      <div className='flex flex-col gap-y-6 w-full'>
+        {projects.map((project: {
+          _id: string
+          title: string
+          liveUrl?: string
+          git?: string
+          githubUrl?: string
+          image?: any
+          imageAlt?: string
+        }) => (
+          <div
+            key={project._id}
+            className='w-full h-max rounded-2xl p-0.5 shadow-lg'
+          >
+            <a
+              href={project.liveUrl || '#'}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='relative rounded-2xl w-full inline-block transition-transform duration-300 ease-in-out hover:scale-[101%] hover:z-20'
+            >
+              <div className='bg-white w-full h-3/4 z-10 relative overflow-hidden rounded-t-2xl'>
+                <div className='relative w-full aspect-video overflow-hidden rounded-t-2xl'>
+                  {project.image && (
+                    <Image
+                      src={urlFor(project.image)}
+                      alt={project.imageAlt || project.title}
+                      fill
+                      sizes='(max-width: 1200px) 100vw, 1200px'
+                      quality={100}
+                      className='object-cover object-top'
+                    />
+                  )}
+                </div>
+              </div>
+
+              <div className='relative flex justify-between items-center w-full min-[400px]:px-4 px-3 bg-[#252525] h-max rounded-b-2xl z-20 pt-3 pb-3'>
+                <div className='flex flex-col'>
+                  <span className='text-[9px] uppercase font-semibold text-[#8491A0]'>
+                    Kliknij żeby zobaczyć
+                  </span>
+
+                  <h3 className='uppercase text-sm font-bold leading-2.5'>
+                    {project.title}
+                  </h3>
+                </div>
+
+                <div className='flex items-center gap-x-3'>
+                  <p className='text-[9px] tracking-wide uppercase font-semibold text-[#8491A0] min-[450px]:block hidden'>
+                    Podgląd kodu {'\u2192'}
+                  </p>
+
+                  {(project.git || project.githubUrl) && (
+                    <a
+                      href={project.git || project.githubUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'                
+                    >
+                      <SiGithub className='h-7 w-7 cursor-pointer hover:text-green-200 transition-colors' />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}
 
 export default function Projects() {
-	return (
-		<section className='flex flex-col items-center min-[500px]:gap-y-7 gap-y-5 w-full' id='projects_section'>
-			<h2 className='uppercase min-[800px]:text-2xl text-xl font-black text-orange-300' id='projects_section__main__section__text'>Projekty</h2>
-
-			<div className='flex flex-col gap-y-6 w-full'>
-				{PROJECTS.map((project, index) => (
-					<div key={index} className='w-full h-max rounded-2xl p-0.5 shadow-lg' id={project.projectId}>
-						<a
-							href={project.liveUrl}
-							target='_blank'
-							rel='noopener noreferrer'
-							className='relative rounded-2xl w-full inline-block transition-transform duration-300 ease-in-out hover:scale-[101%] hover:z-20'>
-							<div className='bg-white w-full h-3/4 z-10 relative overflow-hidden rounded-t-2xl'>
-								<div className='relative w-full aspect-video overflow-hidden rounded-t-2xl'>
-									<Image
-										src={project.imageSrc}
-										alt={project.imageAlt}
-										fill
-										sizes='(max-width: 1200px) 100vw, 1200px'
-										quality={100}
-										className='object-cover object-top'
-									/>
-								</div>
-							</div>
-
-							<div className='relative flex justify-between items-center w-full min-[400px]:px-4 px-3 bg-[#252525] h-max rounded-b-2xl z-20 pt-3 pb-3'>
-								<div className='flex flex-col'>
-									<span className='text-[9px] uppercase font-semibold text-[#8491A0]'>Kliknij żeby zobaczyć</span>
-									<h3 className='uppercase text-sm font-bold leading-2.5'>{project.title}</h3>
-								</div>
-
-								<div className='flex items-center gap-x-3'>
-									<p className='text-[9px] tracking-wide uppercase font-semibold text-[#8491A0] min-[450px]:block hidden'>
-										Podgląd kodu {'\u2192'}
-									</p>
-									<a
-										href={project.githubUrl}
-										target='_blank'
-										rel='noopener noreferrer'
-										onClick={e => e.stopPropagation()}
-									>
-										<SiGithub className='h-7 w-7 cursor-pointer hover:text-green-200 transition-colors' />
-									</a>
-								</div>
-							</div>
-						</a>
-					</div>
-				))}
-			</div>
-		</section>
-	);
+  return (
+    <Suspense fallback={<p>Ładowanie projektów...</p>}>
+      <ProjectsContent />
+    </Suspense>
+  )
 }
