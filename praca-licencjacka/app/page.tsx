@@ -5,9 +5,11 @@ import Skills from './components/skills';
 import Experience from './components/expierence';
 import Footer from '@/app/components/footer';
 
+import ClientLayout from './client-layout';
+
 export default function Home() {
 	return (
-		<div className='flex flex-col items-center bg-(--bg-color)'>
+		<ClientLayout>
 			{/* Sekcja Header */}
 			<Header />
 
@@ -31,6 +33,6 @@ export default function Home() {
 
 			{/* Sekcja Footer */}
 			<Footer />
-		</div>
+		</ClientLayout>
 	);
 }
