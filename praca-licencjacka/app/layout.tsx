@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang='pl' className={`${poppins.variable} ${geistMono.variable} ${mrDafoe.variable} h-full antialiased`}>
 			<head>
-				<meta name='theme-color' content='#059669' />
+				<meta name='theme-color' content='#ffffff' />
 			</head>
 			<body className='min-h-full flex flex-col'>{children}</body>
 		</html>
